@@ -27,8 +27,9 @@
     "node": ">=8.0.0"
   },
   "scripts": {
+    "prebuild": "rm -rf lib && mkdir -p lib",
     "build": "babel src/ -d lib/",
-    "prepare": "rm -rf lib && mkdir -p lib",
+    "prepare": "npm run build",
     "test": "echo \"Error: no tests available\" && exit 0"
   },
   "babel": {
