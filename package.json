@@ -1,5 +1,5 @@
 {
-  "name": "ramda.ext",
+  "name": "@paqmind/ramda",
   "description": "Ramda extended with additional helpers",
   "version": "0.1.1",
   "author": "Ivan Kleshnin <ivan@paqmind.com> (paqmind.com)",
@@ -35,5 +35,8 @@
     "presets": [
       "es2015"
     ]
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
