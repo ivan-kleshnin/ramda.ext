@@ -4,6 +4,16 @@ Paqmind extensions to [Ramda](http://ramdajs.com/) mostly concerned about Lenses
 
 **wip**
 
+#### Install
+
+```
+$ npm install @paqmind/ramda
+```
+
+```js
+import * as R from "@paqmind/ramda" // Hint: use IDE shortcuts for most common imports
+```
+
 ## Extra API
 
 The API reexports all functions from [Ramda](http://ramdajs.com/docs/) adding the following.
@@ -27,7 +37,17 @@ Useful shortcuts.
 * `unset2`
 * `view2`
 
-Allow to use strings and arrays in place of lenses.
+Allow to use strings and arrays in place of lenses. 
+For weird reasons, Ramda doesn't support convenient shortcuts for objects and arrays. 
+We follow [Partial.Lenses](https://github.com/calmm-js/partial.lenses) design and use them.
+
+```js
+R.set2("foo", "FOO", {})          // can be used instead of R.assoc
+R.set2(["foo", "bar"], "BAR", {}) // can be used instead of R.assocPath
+```
+
+Note: names are under consideration. We may decide to override `R.set, R.over, R.view` instead of adding `xxx2` versions
+in the future.
 
 #### Indexed versions
 
