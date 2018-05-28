@@ -54,6 +54,10 @@ export let mergeDeepFlipped = R.flip(R.mergeDeepRight)
 export let map2 = R.addIndex(R.map)
 export let filter2 = R.addIndex(R.filter)
 export let chain2 = R.addIndex(R.chain)
+export let reduce2 = R.addIndex(R.reduce)
+
+// Arrays
+export let takeUntil = R.curry((fn, xs) => R.takeWhile(R.complement(fn), xs))
 
 // Objects
 export let isPlainObj = (o) =>
