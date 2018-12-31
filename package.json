@@ -16,14 +16,13 @@
   ],
   "main": "lib/index.js",
   "dependencies": {
-    "ramda": "^0.25.0"
+    "@babel/core": "^7.2.2",
+    "babel-preset-env": "^1.7.0",
+    "ramda": "^0.26.1"
   },
-  "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.6.1"
-  },
+  "devDependencies": {},
   "engines": {
-    "node": ">=8.0.0"
+    "node": ">=10.0.0"
   },
   "scripts": {
     "prebuild": "rm -rf lib && mkdir -p lib",
@@ -33,7 +32,14 @@
   },
   "babel": {
     "presets": [
-      "es2015"
+      [
+        "env",
+        {
+          "targets": {
+            "browsers": "> 1%"
+          }
+        }
+      ]
     ]
   },
   "publishConfig": {
