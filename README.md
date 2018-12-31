@@ -4,14 +4,14 @@ Paqmind extensions to [Ramda](http://ramdajs.com/) mostly concerned about Lenses
 
 **wip**
 
-#### Install
+#### Usage
 
 ```
-$ npm install @paqmind/ramda
+$ npm install @paqmind/ramdax
 ```
 
 ```js
-import * as R from "@paqmind/ramda"
+import * as R from "@paqmind/ramdax"
 ```
 
 Hints: use IDE shortcuts for most common imports, check Webpack's `ProvidePlugin`.
